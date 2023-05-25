@@ -1,0 +1,230 @@
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+
+}
+
+main{
+    background-color: #2000d925;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+
+    width: 100%;
+    height: 100%;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main div a{
+    height: 50%;
+    width: 50%;
+
+    border-radius: 100%;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+
+    transition: 180ms linear;
+
+    outline: 0;
+
+}
+
+svg{
+    transform: scale(1.35);
+
+    transition: 180ms linear;
+
+}
+
+main div:nth-child(1) a,
+main div:nth-child(2) a,
+main div:nth-child(3) a{
+    background-color: #ffffff50;
+    color: black;
+
+    box-shadow: 0 0 0 3px transparent;
+
+}
+
+main div:nth-child(1) a:focus,
+main div:nth-child(2) a:focus,
+main div:nth-child(3) a:focus{
+    color: #5500ff;
+
+    box-shadow: 0 0 0 3px #5500ff;
+
+    transition: 180ms linear;
+
+}
+
+main div:nth-child(1) a:hover,
+main div:nth-child(2) a:hover,
+main div:nth-child(3) a:hover{
+    background-color: #ff000050;
+
+    transition: 180ms linear;
+
+}
+
+main div:nth-child(1) a:hover svg,
+main div:nth-child(2) a:hover svg,
+main div:nth-child(3) a:hover svg{
+    transform: scale(1.65);
+
+    transition: 180ms linear;
+
+}
+
+main div:nth-child(4) a,
+main div:nth-child(5) a,
+main div:nth-child(6) a{
+    background-color: #ffffff;
+    color: black
+
+}
+
+main div:nth-child(4) a::after,
+main div:nth-child(5) a::after,
+main div:nth-child(6) a::after{
+    content: "";
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    background-color: transparent;
+
+    display: block;
+    position: absolute;
+
+    box-shadow: 0 0 0 3px transparent;
+
+    opacity: 0;
+
+    transition: 180ms linear;
+
+}
+
+main div:nth-child(4) a:focus,
+main div:nth-child(5) a:focus,
+main div:nth-child(6) a:focus{
+    color: darkblue;
+
+}
+
+main div:nth-child(4) a:hover,
+main div:nth-child(5) a:hover,
+main div:nth-child(6) a:hover{
+    color: darkred;
+
+}
+
+main div:nth-child(4) a:focus::after,
+main div:nth-child(5) a:focus::after,
+main div:nth-child(6) a:focus::after{
+    opacity: 1;
+    
+    box-shadow: 0 0 0 3px darkblue;
+
+    transition: 180ms linear;
+}
+
+main div:nth-child(4) a:hover::after,
+main div:nth-child(5) a:hover::after,
+main div:nth-child(6) a:hover::after{
+    opacity: 1;
+    
+    box-shadow: 0 0 0 3px darkred;
+
+    transition: 180ms linear;
+}
+
+main div:nth-child(7) a,
+main div:nth-child(8) a,
+main div:nth-child(9) a{
+    background-color: transparent;
+    box-shadow: 0 0 0 3px darkgreen;
+    color: darkgreen;
+
+    transition: 200ms linear;
+
+}
+
+main div:nth-child(7) a::after,
+main div:nth-child(8) a::after,
+main div:nth-child(9) a::after{
+    content: "";
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    background-color: transparent;
+
+    display: block;
+    position: absolute;
+
+    box-shadow: 0 0 0 3px transparent;
+
+    opacity: 1;
+
+    transition: 200ms linear;
+}
+
+main div:nth-child(7) a:focus,
+main div:nth-child(8) a:focus,
+main div:nth-child(9) a:focus,
+main div:nth-child(7) a:hover,
+main div:nth-child(8) a:hover,
+main div:nth-child(9) a:hover{
+    box-shadow: 0 0 0 5px rgba(0, 100, 0, 0.50);
+
+
+}
+
+main div:nth-child(7) a:focus::after,
+main div:nth-child(8) a:focus::after,
+main div:nth-child(9) a:focus::after,
+main div:nth-child(7) a:hover::after,
+main div:nth-child(8) a:hover::after,
+main div:nth-child(9) a:hover::after{
+    box-shadow: 0 0 0 3px darkgreen;
+
+
+}
+
+main div:nth-child(7) a:focus svg,
+main div:nth-child(8) a:focus svg,
+main div:nth-child(9) a:focus svg,
+main div:nth-child(7) a:hover svg,
+main div:nth-child(8) a:hover svg,
+main div:nth-child(9) a:hover svg{
+    animation: shake 600ms ease-in-out normal;
+    opacity: 0.50;
+
+}
+
+@keyframes shake {
+    0%{
+        transform: rotate(0) scale(1.35);
+
+    }
+    25%{
+        transform: rotate(-25deg) scale(1.35);
+
+    }
+    50%{
+        transform: rotate(25deg) scale(1.35);
+
+    }
+    100%{
+        transform: rotate(0) scale(1.35);
+
+    }
+}
